@@ -1,13 +1,12 @@
 $(document).ready(function () {
   // Tampilan awal Cover -> setelah di klik Tampil Detail Undangan
-  $("#cover").show();
   $("#detailUndangan").hide();
-  $("#bukaUndangan").click(function () {
-    $("#cover").hide();
-    $("#detailUndangan").show();
-  });
+  $("#navbar").hide();
 
-  $("#konfirmasi").click(function () {
-    alert("Terima kasih atas konfirmasi kehadiran Anda!");
+  $("#bukaUndangan").click(function () {
+    $("#cover").fadeOut("1000", function () {
+      $("#detailUndangan").slideDown("1000");
+      $("#navbar").slideDown("1000");
+    });
   });
 });
