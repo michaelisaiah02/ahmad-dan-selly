@@ -3,6 +3,16 @@ $(document).ready(function () {
   $("#detailUndangan").hide();
   $("#navbar").hide();
 
+  var audio = document.getElementById("musik");
+
+  // Ketika musik selesai diputar
+  audio.addEventListener("ended", function () {
+    // Mengatur ulang posisi pemutaran ke awal
+    audio.currentTime = 0;
+    // Memainkan musik kembali
+    audio.play();
+  });
+
   // Ketika tombol "Buka Undangan" ditekan
   $("#bukaUndangan").click(function () {
     $("#cover").fadeOut("1000", function () {
