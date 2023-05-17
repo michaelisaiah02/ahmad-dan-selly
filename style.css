@@ -14,3 +14,31 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+section#home {
+  background: #edc967;
+  padding-top: 5rem;
+}
+
+section#wishes {
+  padding-bottom: 5rem;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (min-width: 1200px) {
+  img.border {
+    border-width: 0.75rem !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  img.border {
+    border-width: 0.5rem !important;
+  }
+}
+img.border {
+  border-color: #edc967 !important;
+}
