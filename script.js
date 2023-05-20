@@ -24,4 +24,12 @@ $(document).ready(function () {
       audio.play();
     });
   });
+
+  $(".image-link").click(function (e) {
+    e.preventDefault();
+    var imageSrc = $(this).find("img").attr("src");
+    $("#modalImage").attr("src", imageSrc);
+    $("#fotoModal").modal("show");
+    console.log(imageSrc);
+  });
 });

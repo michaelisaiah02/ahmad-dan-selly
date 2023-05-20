@@ -64,7 +64,7 @@ img.border {
 .heart-circle {
   position: absolute;
   top: -37.5px;
-  left: 54%;
+  left: 50%;
   transform: translateX(-50%);
   width: 50px;
   height: 50px;
@@ -80,4 +80,15 @@ img.border {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+
+.container .image-container {
+  columns: 3 250px;
+  gap: 15px;
+}
+
+.container .image-container img {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
 }
