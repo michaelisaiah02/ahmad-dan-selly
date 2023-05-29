@@ -12,14 +12,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="script.js"></script>
   </head>
-  <body style="height: 200rem; overflow-x: hidden">
-    <audio id="musik" src="beautiful-in-white.mp3" type="audio/mpeg"></audio>
+  <body id="home">
+    <audio id="musik" src="A Thousand Years.mp3" type="audio/mpeg"></audio>
+    <button id="pauseplay" class="btn btn-dark shadow"><i class="bi bi-pause-fill"></i></button>
+
     <!-- Cover -->
-    <div id="cover" class="text-center">
+    <div id="cover" class="text-center text-light">
       <h4>The Wedding</h4>
-      <h5>32 Agustus 3232</h5>
-      <img alt="Bapak & Ibu" />
-      <h1>Cowoknya Selly</h1>
+      <h5>2 Juli 2023 / 13 dzulhijjah 1444 Hijriah</h5>
+      <img src="img/profile.jpg" class="img-thumbnail rounded-circle" alt="Ahmad & Selly" width="200" />
+      <h1>Ahmad</h1>
       <h1>&</h1>
       <h1>Selly</h1>
       <h6>Kepada Yth</h6>
@@ -33,33 +35,33 @@
         <div class="navbar-collapse" id="navbarNav">
           <ul class="navbar-nav flex-row justify-content-evenly">
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fas fa-user"></i>
+              <a class="nav-link" href="#home">
+                <i class="fas fa-user home"></i>
                 <span>Mempelai</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fas fa-calendar-alt"></i>
+              <a class="nav-link" href="#acara">
+                <i class="fas fa-calendar-alt acara"></i>
                 <span>Acara</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#home">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fas fa-images"></i>
+              <a class="nav-link" href="#gallery">
+                <i class="fas fa-images gallery"></i>
                 <span>Gallery</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fas fa-comments"></i>
-                <span>Wishes</span>
+              <a class="nav-link" href="#timer">
+                <i class="fa-solid fa-stopwatch timer"></i>
+                <span>Timer</span>
               </a>
             </li>
           </ul>
@@ -70,32 +72,35 @@
     <div id="detailUndangan">
       <div class="container-fluid p-0 m-0">
         <!-- Home -->
-        <section id="home" class="text-md-start text-center">
+        <section id="mempelai" class="text-md-start text-center">
           <div class="container">
             <div class="row">
-              <div class="col-md-6 mb-3">
+              <div class="col-md-4 mb-3">
                 <h6 class="p-0 m-0">THE WEDDING</h6>
-                <h1>Cowoknya & Selly</h1>
-                <h6>“Demikian mereka bukan lagi dua melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia.” – Matius (19 : 6) –</h6>
+                <h1 class="mb-3">Ahmad & Selly</h1>
+                <h6 class="text-wrap">
+                  “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+                  Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.” - Ar-Rum 21
+                </h6>
               </div>
-              <div class="col-md-3 col-6 mb-3">
+              <div class="col-md-4 col-6 mb-3">
                 <div class="card rounded rounded-4 shadow h-100 border border-0">
                   <div class="card-body d-flex flex-column">
-                    <img class="img-fluid rounded rounded-circle mb-3 border" src="img/cowok.png" alt="" />
-                    <h5 class="card-title">Cowoknya</h5>
-                    <p class="card-text">Putra Keseribu : Bapak Pulau & Ibu Seribu</p>
+                    <img class="img-fluid rounded rounded-circle mb-3 border" src="img/ahmad.jpg" alt="" />
+                    <h5 class="card-title">Ahmad Ependi</h5>
+                    <p class="card-text">Anak dari Alm Bapak Ukar & Ibu Yani</p>
                     <div class="d-flex justify-content-center mt-auto">
                       <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram text-dark fs-4"></i></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-6 mb-3">
+              <div class="col-md-4 col-6 mb-3">
                 <div class="card rounded rounded-4 shadow h-100 border border-0">
                   <div class="card-body d-flex flex-column">
-                    <img class="img-fluid rounded rounded-circle mb-3 border" src="img/cowok.png" alt="" />
-                    <h5 class="card-title">Selly</h5>
-                    <p class="card-text">Putri Ketigaperempat : Bapak Kepala & Ibu Badan</p>
+                    <img class="img-fluid rounded rounded-circle mb-3 border" src="img/selly.jpg" alt="" />
+                    <h5 class="card-title">Selly Suartika, S.M</h5>
+                    <p class="card-text">Anak dari Bapak Nandang Wardiana & Ibu Cicih Sumiarsih</p>
                     <div class="d-flex justify-content-center mt-auto">
                       <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram text-dark fs-4"></i></a>
                     </div>
@@ -117,46 +122,38 @@
         <section id="acara" class="text-center">
           <div class="row justify-content-center mb-2 hati">
             <h1>OUR SPECIAL</h1>
-            <span class="fs-1">Wedding Event</span>
+            <span class="fs-1 mb-2 mb-lg-0">Wedding Event</span>
           </div>
-          <div class="row justify-content-center mx-3">
-            <div class="col-sm-5 mb-3 hati">
+          <div class="row justify-content-center mx-5">
+            <div class="col-12 col-lg-8 mt-5 mb-3 hati">
               <div class="card rounded rounded-1 shadow h-100 border border-0 position-relative h-100">
                 <div class="heart-circle fa fa-heart"></div>
                 <div class="card-body d-flex flex-column mt-4 mx-2">
-                  <h3 class="card-title mb-3">Pemberkatan</h3>
-                  <h5 class="card-text pb-0 mb-0">Rabu, 32 Agustus 3232</h5>
-                  <span class="fs-5 mb-3">10.00 WIB s.d 12.00 WIB</span>
-                  <p class="fs-5 fw-bold mb-3">Di Rumah Masing - Masing</p>
-                  <div class="d-flex justify-content-center mt-auto mb-3">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.55619833636186!2d107.65785970923383!3d-6.902659981762458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e7293cf017%3A0x3a3a343e12462135!2sIsaiah%20MBBF%20Animals%20Breeder!5e0!3m2!1sid!2sid!4v1684606901732!5m2!1sid!2sid"
-                      width="400"
-                      height="300"
-                      style="border: 0"
-                      allowfullscreen=""
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3">
+                      <h3 class="card-title mb-3">Akad</h3>
+                      <span class="fs-5 mb-3">09.00 WIB </span>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                      <h3 class="card-title mb-3">Resepsi</h3>
+                      <span class="fs-5 mb-3">11.00 WIB - 14.00 WIB</span>
+                    </div>
+                    <h3 class="card-title mb-2">Tanggal :</h3>
+                    <h5 class="card-text pb-0 mb-3">
+                      Minggu, 2 Juli 2023
+                      <p class="p-0 m-0">/</p>
+                      13 dzulhijjah 1444 Hijriah
+                    </h5>
+                    <h3 class="card-title mb-2">Tempat :</h3>
+                    <h5 class="card-text pb-0 mb-3">Gedung IPHI (Ikatan Persaudaraan Haji Indonesia) - Jl. Purwakarta No. 173 Antapani Tengah, Kec. Antapani, Kota Bandung, Jawa Barat, 40291</h5>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-5 mb-3 hati">
-              <div class="card rounded rounded-1 shadow h-100 border border-0 position-relative h-100">
-                <div class="heart-circle fa fa-heart"></div>
-                <div class="card-body d-flex flex-column mt-4 mx-2">
-                  <h3 class="card-title mb-3">Resepsi</h3>
-                  <h5 class="card-text pb-0 mb-0">Rabu, 32 Agustus 3232</h5>
-                  <span class="fs-5 mb-3">12.00 WIB s.d Selesai</span>
-                  <p class="fs-5 fw-bold mb-3">Palung Mariana</p>
-                  <div class="d-flex justify-content-center mt-auto mb-3">
+                  <div class="d-flex justify-content-center mt-auto">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.55619833636186!2d107.65785970923383!3d-6.902659981762458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e7293cf017%3A0x3a3a343e12462135!2sIsaiah%20MBBF%20Animals%20Breeder!5e0!3m2!1sid!2sid!4v1684606901732!5m2!1sid!2sid"
-                      width="400"
-                      height="300"
+                      class="card-img-top"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7797590561727!2d107.6587110147729!3d-6.916913995002226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7fa68d3cf2d%3A0x7157fe2be9b4c2e5!2sGedung%20Ikatan%20Persaudaraan%20Haji%20Indonesia%20(IPHI%20Antapani)!5e0!3m2!1sid!2sid!4v1685170748965!5m2!1sid!2sid"
+                      height="400"
                       style="border: 0"
-                      allowfullscreen=""
+                      allowfullscreen="true"
                       loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
@@ -167,27 +164,27 @@
           </div>
           <div class="row justify-content-center mb-2 hati">
             <h1>WITH LOVE</h1>
-            <span class="fs-1">Couple Stories</span>
+            <span class="fs-1 mb-5 mb-md-0">Couple Stories</span>
           </div>
           <div class="row justify-content-center">
-            <div class="col-md-5 mb-3 hati">
+            <div class="col-md-5 col-10 hati">
               <div class="card rounded rounded-1 shadow h-100 border border-0">
                 <div class="heart-circle fa fa-heart"></div>
                 <div class="card-body d-flex flex-column">
-                  <img class="img-fluid mb-3" src="img/cowok.png" alt="" />
+                  <img class="img-fluid mb-3" src="img/male.jpg" alt="" />
                   <h5 class="card-title">Story Of Male</h5>
-                  <p class="card-text">
+                  <p class="card-text mb-5">
                     Childhood lover. Dikala itu aku hanya bisa mengagumi nya saja dari kejauhan. Merasa sangat memiliki jarak yang begituuuuu jauh. Memandang nya saja membuat hatiku luluh lantah. Tapi gak bisa dan bahkan berharap untuk
-                    dekat dengannya. Dengan ucapan doa tiap hari seiring jalan nya waktu Tuhan mempertemukan kami dengan berbagai cara. Penantian panjang terjawab juga. Love you
+                    dekat dengannya. Dengan ucapan doa tiap hari seiring jalan nya waktu Tuhan mempertemukan kami dengan berbagai cara. Penantian panjang terjawab juga. Love you.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-5 mb-3">
+            <div class="col-md-5 col-10 hati">
               <div class="card rounded rounded-1 shadow h-100 border border-0">
                 <div class="heart-circle fa fa-heart"></div>
                 <div class="card-body d-flex flex-column">
-                  <img class="img-fluid mb-3" src="img/cowok.png" alt="" />
+                  <img class="img-fluid mb-3" src="img/female.jpg" alt="" />
                   <h5 class="card-title">Story Of Female</h5>
                   <p class="card-text">
                     Aku memutuskan untuk tidak berpacaran sebelum kutemukan bahwa pacar ku akan jadi suamiku alias tidak coba coba dan selalu kudoakan untuk “my first love Will be my forever husband” and thank God its true. I found you.
@@ -213,45 +210,7 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="image-container">
-                <a href="#" class="image-link">
-                  <img src="img/1.jpg" alt="Landscape Foto" id="modalImage1" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/2.jpg" alt="Potret Foto" id="modalImage2" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/3.jpg" alt="Potret Foto" id="modalImage3" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/4.jpg" alt="Landscape Foto" id="modalImage4" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/5.jpg" alt="Landscape Foto" id="modalImage5" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/6.jpg" alt="Potret Foto" id="modalImage6" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/7.jpg" alt="Potret Foto" id="modalImage7" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/8.jpg" alt="Landscape Foto" id="modalImage8" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/9.jpg" alt="Landscape Foto" id="modalImage9" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/2.jpg" alt="Potret Foto" id="modalImage2" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/4.jpg" alt="Potret Foto" id="modalImage4" alt="Foto Besar" class="img-fluid" />
-                </a>
-                <a href="#" class="image-link">
-                  <img src="img/5.jpg" alt="Landscape Foto" id="modalImage5" alt="Foto Besar" class="img-fluid" />
-                </a>
-              </div>
-              <!-- Tambahkan kode HTML untuk foto-foto lainnya -->
+              <div class="image-container"></div>
             </div>
           </div>
         </section>
@@ -263,6 +222,65 @@
           ></path>
         </svg>
         <!-- End Gallery -->
+        <!-- Timer -->
+        <section id="timer">
+          <div class="row justify-content-center text-center">
+            <h1>Countdown Time</h1>
+          </div>
+          <ul class="list-group list-group-horizontal justify-content-center text-center mb-3" id="waktu">
+            <li class="list-group-item" id="hari">
+              <p class="fs-1">0</p>
+              Hari
+            </li>
+            <li class="list-group-item" id="jam">
+              <p class="fs-1">0</p>
+              Jam
+            </li>
+            <li class="list-group-item" id="menit">
+              <p class="fs-1">0</p>
+              Menit
+            </li>
+            <li class="list-group-item" id="detik">
+              <p class="fs-1">0</p>
+              Detik
+            </li>
+          </ul>
+          <div class="row justify-content-center">
+            <div class="card shadow" style="width: 35%; height: 100%">
+              <div class="card-body">
+                <h5 class="card-title text-center">Protokol Kesehatan</h5>
+                <img src="img/protokol.png" alt="Protokol" class="img-fluid mx-auto p-0" />
+                <p class="card-text text-wrap text-center">Acara kami akan mengikuti segala prosedur protokol kesehatan untuk mencegah penularan COVID-19</p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center text-center">
+            <h1>We’re Getting Married!</h1>
+            <p class="text-wrap">Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami</p>
+          </div>
+          <div class="hr-heart">
+            <div class="hr-line gold"></div>
+            <div><i class="fa fa-heart fa-5x tengah"></i></div>
+            <div class="hr-line dgold"></div>
+          </div>
+          <div class="row justify-content-center text-center">
+            <h1>Ahmad</h1>
+            <h1>&</h1>
+            <h1>Selly</h1>
+            <h2>2 Juli 2023</h2>
+          </div>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#edc967"
+            fill-opacity="1"
+            d="M0,256L34.3,240C68.6,224,137,192,206,186.7C274.3,181,343,203,411,192C480,181,549,139,617,138.7C685.7,139,754,181,823,202.7C891.4,224,960,224,1029,213.3C1097.1,203,1166,181,1234,181.3C1302.9,181,1371,203,1406,213.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+          ></path>
+        </svg>
+        <!-- End Timer -->
+        <!-- Penutup -->
+        <section id="penutup" style="height: 5rem"></section>
+        <!-- End Penutup -->
       </div>
     </div>
     <!-- Modal -->
